@@ -1,43 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("miniVideo");
-    const playBtn = document.getElementById("playBtn");
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
+window.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('videoReel');
+  const togglePlayBtn = document.getElementById('togglePlayBtn');
 
-    // Play/pause toggle
-    playBtn.addEventListener("click", function () {
-        if (video.paused) {
-            video.play();
-            playBtn.style.display = "none";
-        } else {
-            video.pause();
-            playBtn.style.display = "block";
-        }
-    });
+  togglePlayBtn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
 
-    // Click video area to toggle play
-    video.addEventListener("click", function () {
-        if (video.paused) {
-            video.play();
-            playBtn.style.display = "none";
-        } else {
-            video.pause();
-            playBtn.style.display = "block";
-        }
-    });
+  window.toggleFullscreen = function () {
+    const container = document.getElementById('videoContainer');
+    if (!document.fullscreenElement) {
+      if (container.requestFullscreen) {
+        container.requestFullscreen();
+      } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  };
 
-    // Show play button again when video ends
-    video.addEventListener("ended", function () {
-        playBtn.style.display = "block";
-    });
-
-    // Fullscreen toggle
-    fullscreenBtn.addEventListener("click", function () {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) { // Safari
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) { // IE11
-            video.msRequestFullscreen();
-        }
-    });
+  window.toggleMute = function () {
+    video.muted = !video.muted;
+  };
 });
