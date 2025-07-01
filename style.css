@@ -1,0 +1,824 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-inline: 7rem;
+    padding-block: 0.5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    background-color: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+i {
+    size: 1vw;
+}
+
+.logo {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    width: fit-content;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #1B1C57;
+    font-size: 1.2vw;
+    font-weight: 700;
+    width: 100%;
+}
+
+.nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.nav-list li {
+    list-style-type: none;
+}
+
+.nav-list li a {
+    padding: 0.5vw 1.5vw;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: 500;
+    color: #1B1C57;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list li:hover a {
+    background-color: #C3ECFE;
+}
+
+main {
+    flex: 1;
+    top: 0;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    flex: 4;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20%;
+}
+
+.bumay {
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.bumay-desc {
+    padding: 5% 5% 0 6%;
+    background: url(image/vector.png); 
+    background-origin: content-box; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bumay-desc h1{
+    color: #F59E0B;
+    font-family: Lexend;
+    font-size: 3.3vw;
+    font-weight: 550;
+    letter-spacing: -3px;
+    text-transform: capitalize;
+    padding: 5% 0 0 7%;
+}
+
+.bumay-desc h2{
+    color: #626687;
+    font-family: Lexend;
+    font-size: 1.3vw;
+    padding: 0 0 0 11%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    line-height: 1.5;
+}
+
+.bumay-desc p {
+    color: #626687;
+    font-size: 1vw;
+    padding: 3% 0 0 11%;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.bumay-desc .mitra {
+    padding: 0 0 5% 11%;
+    display: inline-flex;
+    flex: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bumay-desc .mitra img{
+    width: 75%;
+}
+
+.bumay-img {
+    width: 47%; 
+    float: right;
+    top: 0;
+    border-radius: 0 0 0 40px;
+}
+
+.kamar {
+    margin-bottom: 5%;
+    margin-inline: 10%;
+    padding-top: 5%;
+}
+
+.kamar h1,
+.fasilitas h1 {
+    color: #1B1C57;
+    padding-left: 50px;
+    font-size: 2vw;
+}
+
+.kamar h4,
+.fasilitas h4 {
+    color: #F59E0B;
+    font-weight: 500;
+    font-size: 1vw;
+    margin: 0;
+    padding-left: 7px;
+}
+
+.kamar-list {
+    display: inline-flex;
+    left: 0;
+    gap: 3vw;
+    padding-top: 15px;
+}
+/* .kamar-card:hover {
+    background-color: #C3ECFE;
+} */
+
+.kamar-card h3 {
+    font-weight: 650; 
+    font-size: 1.2vw;
+    margin-block: 10px;
+    width: fit-content;
+}
+
+.kamar-card p {
+    font-weight: 500;
+    margin-block: 5px;
+    width: fit-content;
+    color: #3C4563; 
+    font-size: 1vw;
+}
+
+.kamar-img {
+    width: fit-content;
+    position: relative;
+
+}
+
+.kamar-img img {
+    width: 18vw;
+    border-radius: 10%;
+    transition: width 0.5s ;
+}
+
+.kamar-badge {
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    bottom: 5%;
+    left: 10%;
+    background-size: contain;
+    padding-inline: 10px;
+    border-radius: 25px;
+    z-index: 8888;
+}
+
+.kamar-badge i {
+    height: 100%;
+    margin-top: 0.1vw;
+    margin-left: 0.5vw;
+}
+
+.kamar-badge p {
+    margin: 0.5vw;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+#populer, #populer p {
+    color: #EF4444;
+    background-color: #FEE2E2;
+}
+
+.fasilitas-slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.fasilitas-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+}
+
+.slide-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-track img:hover {
+  transform: scale(1.03);
+}
+
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+}
+
+.close-img {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .slide-track img {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+
+.kamar-desc {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.kamar-detail {
+    font-size: 1vw;
+}
+
+.fasilitas-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fasilitas-list {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fasilitas-detail p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+
+.fasilitas {
+    padding-top: 7%;
+    display: flex;
+    align-items: center;
+    margin-inline: 8%;
+    margin-bottom: 13%;
+    justify-content: center;
+    gap: 5%;
+}
+
+.fasilitas-img {
+    height:auto;
+    position: relative;
+    width: 50%;
+}
+
+.fasilitas-img img{
+    width: 85%; 
+    border-radius: 15px;
+    float: right;
+}
+
+.fasilitas-img-front {
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    align-items: last baseline;
+    gap: 0.5vw;
+    bottom: -20px;
+    left: 0;
+    right: 10%;
+    background-size: contain;
+    z-index: 8888;
+}
+
+.fasilitas-img-front img {
+    border-radius: 10px;
+}
+
+.fasilitas p {
+    padding-left: 50px;
+    color: #626687;
+    font-size: 1vw;
+}
+
+.fasilitas-desc {
+    float: left;
+    width: 50%;
+}
+
+.fasilitas-row {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    justify-content: left;
+}
+
+.fasilitas-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fasilitas-detail {
+    color: #626687;
+    font-family: Lexend;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.fasilitas-detail p{
+    padding-left: 10%;
+    width: 100%;
+    margin: 3%;
+}
+
+.profile {
+    padding-left: 50px;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: fit-content;
+}
+.profile img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.profile-desc {
+    padding-right: 2%;
+    width: fit-content;
+}
+
+.profile-desc p {
+    width: 100%;
+    padding: 0;
+    margin-block: 3%;
+}
+
+.hubungi {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    padding-inline: 10px;
+    border-radius: 30px;
+    color: #1B1C57;
+    background-color: #C3ECFE;
+    transition: 0.5s ;
+}
+
+.hubungi:hover {
+    background: #F59E0B;
+    color: white;
+}
+.hubungi p:hover {
+    color: white;
+}
+
+
+.hubungi i {
+    height: fit-content;
+    margin-top: 0.1vw;
+    margin-left: 0.5vw;
+    padding-block: auto;
+}
+
+.hubungi p {
+    padding-inline: 1vw;
+    font-weight: 600;
+    margin: 0;
+    padding-block: 1.5vw;
+    transition: 0.9s ;
+}
+
+.lokasi-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.lokasi-section h2 {
+  color: #1B1C57;
+  margin-bottom: 10px;
+}
+
+.lokasi-map {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.fasilitas-img.tiktok-style {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: auto;
+}
+
+.fasilitas-img.tiktok-style video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.video-controls button {
+  background-color: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+video:fullscreen,
+video:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.fasilitas-section {
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.fasilitas-subtitle {
+  color: orange;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.fasilitas-title {
+  font-size: 1.5rem;
+  color: #1a1a40;
+  margin-bottom: 1rem;
+}
+
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.fasilitas-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hubungi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366; /* Warna WhatsApp */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.hubungi:hover {
+  background-color: #1ebe5d;
+}
+
+.hubungi i {
+  font-size: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 10%;
+}
+
+footer p {
+    color: #2d3e50;
+    font-size: 1vw;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.info p {
+    padding-left: 55px;
+    padding-right: 170px;
+}
+
+.alamat {
+    width: 30%;
+}
+
+.alamat h4 {
+    padding-block: 10px;
+    margin: 0;
+    font-size: 1.2vw;
+    color: #1B1C57;
+}
+
+
+aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: 9999;
+}
+
+aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+aside .social-media ul {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+aside .social-media li {
+    list-style-type: none;
+    align-items: center;
+}
+
+aside .social-media li a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #C3ECFE;
+    padding: 1rem ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 12px;
+}
+
+aside .social-media li a img {
+    height: 1.5vw;
+    width: auto;
+}
+
+aside .social-media li a:hover {
+    background-color: #F59E0B;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .logo a {
+        font-size: 1rem;
+    }
+    .nav-list li a {
+        font-size: 0.8rem;
+    }
+    .bumay {
+        flex-direction: column;
+    }
+    .bumay .bumay-img {
+        order: -1;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        border-radius: 0;
+    }
+    .bumay-desc {
+        padding-inline: 10%;
+        background-size: 100% 100%;
+    }
+    .bumay-desc h1, .bumay-desc h2, .bumay-desc p, .bumay-desc .mitra {
+        padding-left: 5%;
+    }
+    .bumay-desc h1 {
+        letter-spacing: -0.7px;
+        font-size: 2.5rem;
+    }
+    .bumay-desc h2 {
+        font-size: 1rem;
+    }
+    .bumay-desc p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    .bumay-desc .mitra img{
+        height: fit-content;
+    }
+    .kamar h4, .fasilitas h4, .kamar-card h3, .kamar-card p {
+        font-size: 1.2rem;
+    }
+    .kamar h1, .fasilitas h1, .kontak-form h1 {
+        font-size: 1.7rem;
+    }
+    .kamar-img {
+        width: 100%;
+    }
+    .kamar-list {
+        flex-wrap: wrap;
+    }
+    .kamar-img img{
+        width: 100%;
+    }
+    
+    .kamar-badge p, .kamar-card p {
+        font-size: 1rem;
+    }
+    .fasilitas {
+        flex-direction: column;
+    }
+    .fasilitas-img {
+        width: 100%;
+    }
+    .fasilitas-desc {
+        float: none;
+        width: 100%;
+        padding-top: 50px;
+    }
+    .fasilitas p {
+        font-size: 1rem;
+    }
+    .kontak-form {
+        background: url(image/rectangle.png);
+    }
+    .kontak-form form {
+        width: fit-content;
+    }
+    .kontak-form h1 {
+        padding-inline: 10%;
+    }
+    form input[type=button] {
+        font-size: 1rem;
+    }
+    form input[type=text] {
+        font-size: 0.7rem;
+        width: 30vw;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .info, .alamat {
+        width: 100%;
+    }
+    .info p, .alamat h4, .alamat p {
+        padding-left: 50px;
+        font-size: 1rem;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    form input[type=button] , form input[type=text], .hubungi p {
+        display: none;
+    }
+    .hubungi {
+        padding: 1rem;
+    }
+    .kontak-form form {
+        background: #C3ECFE;
+        
+    }
+    .kontak-form form i {
+        padding: 1rem;
+    }
+    .kontak-form form:hover {
+        background: #F59E0B;
+        color: white;
+    }
+    .kontak-form form i:hover {
+        color: white;
+    }
+    .kontak {
+        padding-bottom: 10%;
+    }
+    aside {
+        position: relative;
+    }
+    aside .social-media ul {
+        flex-flow: row;
+        border-radius: 12px;
+    }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Kost</title>
+
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
+
+<body>
+
+    <script src="vidiocontrol.js"></script>
+
+    <header id="navbar">
+        <div class="logo">
+            <i class="fas fa-home"></i>
+
+            <a href="#bumay">KOS - KOSAN</a>
+        </div>
+
+        <nav class="nav-list">
+            <ul>
+                <li><a id="btn-kamar" href="#kamar">Kamar</a></li>
+                <li><a id="btn-fasilitas" href="#fasilitas">Fasilitas</a></li>
+                <li><a id="btn-lokasi" href="#lokasi">Lokasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <article id="bumay" class="bumay">
+                <div class="bumay-desc">
+                    <h1>Temukan Tempat Tinggal Kos Eksklusif Cempaka Putih</h1>
+                    <h2>Harga Mulai Rp 1.300.000 - Fasilitas Lengkap!</h2>
+                    <p>Kemitraan Kami</p>
+                    <div class="mitra">
+                        <a href=""><img src="styles/image/logomamikos.png"></a>
+                        <a href=""><img src="styles/image/IdKos.png"></a>
+                    </div>
+                </div>
+                <img class="bumay-img" src="styles/image/home.png" alt="">
+            </article>
+
+            <article id="kamar" class="kamar">
+            <section class="fasilitas-section">
+    
+  <h3 class="fasilitas-subtitle">Foto</h3>
+  <h2 class="fasilitas-title">Fasilitas</h2>
+  
+  <div class="fasilitas-grid">
+    <img src="styles/image/jalan.png" alt="Fasilitas 1">
+    <img src="styles/image/jalan2.png" alt="Fasilitas 2">
+    <img src="styles/image/kamarkoskosancempakaputih.png" alt="Fasilitas 3">
+    <img src="styles/image/Parkir.png" alt="Fasilitas 4">
+    <img src="styles/image/Tangga.png" alt="Fasilitas 5">
+    <img src="styles/image/kamarkoskosancempakaputih.png" alt="Fasilitas 5">
+    <img src="styles/image/KAMARMANDI.png" alt="Fasilitas 5">
+
+  </div>
+</section>
+
+
+<!-- Modal Preview Gambar -->
+<div id="imgModal" class="modal-img" onclick="closeModal()">
+  <span class="close-img">&times;</span>
+  <img class="modal-content-img" id="modalImage" />
+</div>
+
+            </article>
+
+            <article id="fasilitas" class="fasilitas">
+           <div class="fasilitas-img tiktok-style" id="videoContainer">
+  <video id="videoReel" autoplay muted loop playsinline>
+    <source src="styles/video/kos-reels.mp4" type="video/mp4">
+    Browser tidak mendukung video.
+  </video>
+
+  <div class="video-controls">
+    <button id="togglePlayBtn">⏯️</button>
+    <button onclick="toggleMute()">🔊</button>
+  </div>
+</div>
+
+
+        <div class="fasilitas-desc">
+            <div style="display: ruby;">
+                <h4>Siap Huni</h4>
+            </div>
+            <h1>Mari Berkeliling dan Lihat!</h1>
+            <p>Kamar yang direkomendasikan oleh mitra kami yang telah dipilih<br>untuk menjadi kamar impian Anda!</p>
+            <p style="font-weight: 600; color: #1B1C57; padding-top: 3%">Detail Fasilitas</p>
+
+            <!-- Gantilah dua tag section menjadi satu saja -->
+            <section id="fasilitas" class="section-fasilitas">
+                <div class="fasilitas-row">
+                    <!-- Kolom Fasilitas Bangunan -->
+                    <div class="fasilitas-list">
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-bed"></i>
+                            <p>5 Kamar</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-building"></i>
+                            <p>3 Lantai</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-warehouse"></i>
+                            <p>Parkir Motor</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-ruler-combined"></i>
+                            <p>Luas kamar 2,6 m X 6 m</p>
+                        </div>
+                    </div>
+                    <!-- Kolom Detail Harga & Ketentuan -->
+                    <div class="fasilitas-list">
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-tags"></i>
+                            <p>Harga per bulan:<br>- Lantai 1: Rp 1.500.000<br>- Lantai 2 & 3: Rp 1.300.000</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-users"></i>
+                            <p>Maksimal 2 orang/kamar<br>bila Tambah 200 ribuTambah Rp 200.000/orang</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-bolt"></i>
+                            <p>Listrik: Token (dibayar penghuni)</p>
+                        </div>
+                        <div class="fasilitas-detail">
+                            <i class="fas fa-snowflake"></i>
+                            <p>AC & Kamar Mandi Dalam</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="profile">
+                <img src=""></img>
+                <div class="profile-desc">
+                    <p>Anton Suryo K</p>
+                    <p style="color: #888B97">Cempaka Putih</p>
+                </div> 
+               <a href="https://wa.me/6281282666441" target="_blank">
+  <div class="hubungi">
+    <i class="fas fa-phone-alt"></i>
+    <p>Hubungi Sekarang</p>
+  </div>
+</a>
+
+        </div>
+        </article>
+
+        <article id="lokasi" class="lokasi">
+            <div style="display: ruby; ">
+                <h4>Lokasi</h4>
+            </div>
+
+            <section id="lokasi" class="lokasi-section">
+                <div class="lokasi-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.6591880478095!2d106.85626367498999!3d-6.176358693811032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTAnMzQuOSJTIDEwNsKwNTEnMzEuOCJF!5e0!3m2!1sid!2sid!4v1751278636443!5m2!1sid!2sid"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+
+
+        </article>
+        </div>
+
+        <aside>
+            <div class="social-media">
+                <ul>
+                    <li><a href="#"><img src="styles/image/intagram.avif"></img></a></li>
+                    <li><a href="#"><img src="styles/image/tiktok.jpeg"></img></a></li>
+                    <li><a href="#"><img src="styles/image/facebook.webp"></img></a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="info">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+
+                <a href="#bumay">KOS - KOSAN</a>
+            </div>
+            <p>Kami memberikan informasi tentang tempat tinggal sementara seperti kost yang dilengkapi fasilitas lengkap
+                seperti di rumah untuk membantu teman rantau menemukan rumah keduanya</p>
+        </div>
+        <div class="alamat">
+            <h4>Kontak Kami</h4>
+            <p>Cempaka Putih, Daerah Khusus Ibukota Jakarta</p>
+            <p>+62 812-8266-6441</p>
+        </div>
+    </footer>
+
+    <script>
+        var navbar = document.querySelector('#navbar');
+        window.addEventListener("scroll", function () {
+            if (window.scrollY == 0) {
+                navbar.style.backgroundColor = "none"
+            }
+            else {
+                navbar.style.backgroundColor = "#ffffff"
+            }
+        });
+
+    </script>
+</body>
+
+</html>
