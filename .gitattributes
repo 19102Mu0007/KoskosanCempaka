@@ -1,2 +1,2 @@
-styles/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
-styles/**/*.png filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
